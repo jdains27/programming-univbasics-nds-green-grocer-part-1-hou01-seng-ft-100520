@@ -25,4 +25,23 @@ def consolidate_cart(cart)
     {:item => "BEETS", :price => 2.50, :clearance => false},
     {:item => "SOY MILK", :price => 4.50, :clearance => true}
   ]
-  
+  consolidated = []
+  items.each do |item|
+    i = 0
+    count = 0
+    #binding.pry
+    if find_item_by_name_in_collection(item[:item], cart) == item
+      #binding.pry
+      while i < cart.length do
+        if cart[i] == item
+          count += 1
+          #binding.pry
+        end
+        i += 1
+      end
+      item[:count] = count
+      consolidated << item
+    end
+  end
+  consolidated
+end
