@@ -26,12 +26,3 @@ def consolidate_cart(cart)
     {:item => "SOY MILK", :price => 4.50, :clearance => true}
   ]
   
-  consolidate = []
-  items.each do |items|
-    if 
-  count = 0
-  
-end
-
-
-  
