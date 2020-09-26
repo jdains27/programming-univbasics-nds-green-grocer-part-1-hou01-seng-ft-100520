@@ -1,5 +1,11 @@
-def find_item_by_name_in_collection()
-  
+def find_item_by_name_in_collection(name, collection)
+  n = nil 
+  collection.each do |item| 
+    if item[:item] == name 
+      n = item
+    end
+  end
+  n
 
 end
 
